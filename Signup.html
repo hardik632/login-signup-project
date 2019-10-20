@@ -1,0 +1,86 @@
+
+<html>
+        <head>
+            <title>
+                SignUp
+            </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="signup.css">
+        </head>
+        <body>  
+                <div class="header">
+                        <h1>BlOG FIRST</h1>
+                    </div>
+            <div class="box">
+                <div class="heading">
+                <h1>Create a new account</h1>
+                </div>
+                <div class="form">
+                        <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+                            <input type="text" class="inputs" name="fname" placeholder="first name" >
+                            <input type="text" class="inputs" name="lname" placeholder="last name" >
+                            <input type="text" class="inputs" name="email" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" >
+                            <input type="password" class="inputs" name="pass" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            <input type="number" class="inputs" placeholder="Phone number" name="phone">
+                            <input type="text" class="inputs"  name="city" placeholder="city" >
+                            <p class="p1"><input type="checkbox">By clicking below, you agree to our <U>terms and conditions</U> and our <U>privacy policy.</U></p>
+                            <input type="submit" class="signup"value="Signup">
+                        </form>
+                </div>
+                        <form action="login.html">
+                            <div class="loginbox">
+                               <p class="p1">Already have an Account?</p>
+                               <input type="submit" class="login" value="Login">
+                            </div>
+                        </form>
+          
+            </div>
+            <script>
+                function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+            alert("Name must be filled out");
+            return false;
+            }
+            var y = document.forms["myForm"]["lname"].value;
+            if (y == "") {
+            alert("Name must be filled out");
+            return false;
+            }
+            var z = document.forms["myForm"]["email"].value;
+            if (z == "") {
+            alert("email must be filled out");
+            return false;
+            }
+            var a = document.forms["myForm"]["pass"].value;
+            if (a == "") {
+            alert("password must be filled out");
+            return false;
+            }
+            
+    
+            var b = document.forms["myForm"]["phone"].value;
+            if (b == null) {
+            alert("phone number must be filled out");
+            return false;
+            }
+            if(b.length!=10)
+            {
+                alert("number must be of 10 digits");
+            return false;
+            }
+            
+            var c = document.forms["myForm"]["city"].value;
+            if (c == "") {
+            alert("city must be filled out");
+            return false;
+            }
+                }
+            
+            </script>
+        </body>
+    </html>
